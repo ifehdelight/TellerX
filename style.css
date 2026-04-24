@@ -60,7 +60,7 @@
       border: 2px solid #fff8dc;
     }
     
-    input::placehorder {
+    input::placeholder {
       color: #6b7a90;
     }
     
@@ -120,7 +120,7 @@
         transform: rotate(0deg);
       }
       100% {
-        transform: rotate(369deg);
+        transform: rotate(360deg);
       }
     }
     
@@ -197,7 +197,7 @@
       padding: 30px 45px;
       justify-content: flex-start;
       /*border: 2px solid gray;*/
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4)
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
       border-radius: 10px;
     }
     
@@ -212,4 +212,4 @@
     
     .transfer-btn {
       margin-left: -32px;
-       }
+    }
