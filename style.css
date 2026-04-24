@@ -123,11 +123,6 @@
         transform: rotate(369deg);
       }
     }
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
     
     .dcontainer {
       background: ghostwhite;
@@ -217,4 +212,4 @@
     
     .transfer-btn {
       margin-left: -32px;
-    }
+       }
