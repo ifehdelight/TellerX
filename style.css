@@ -128,7 +128,7 @@
       background: ghostwhite;
       padding: 20px 20px 150px 20px;
       margin: 0 auto;
-      width: 90%;
+      width: 100%;
       max-width: 400px;
       border-bottom-right-radius: 15px;
       border-bottom-left-radius: 15px;
@@ -192,12 +192,11 @@
     .other-actions {
       display: flex;
       flex-direction: row;
-      gap: 15px;
+      gap: 20px;
       background: white;
       padding: 30px 45px;
       justify-content: flex-start;
-      /*border: 2px solid gray;*/
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+      box-shadow: 0 2px 7px rgba(0, 0, 0, 0.4);
       border-radius: 10px;
     }
     
@@ -211,5 +210,5 @@
     }
     
     .transfer-btn {
-      margin-left: -32px;
+      margin-left: -15px;
     }
