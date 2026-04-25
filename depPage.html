@@ -1,1 +1,86 @@
+<!DOCTYPE html>
+<html>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Title</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+   
+    .page {
+      background: cornflowerblue;
+      padding: 15px 20px 70px 20px;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 400px;
+      color: ghostwhite;
+      height: clamp(750px, 3vw, 600px);
+    }
+    
+    .deposit {
+      font-size: 25px;
+      font-weight: 500;
+      margin-bottom: 30px;
+      margin-left: 10px;
+    }
+    
+    .number {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    
+    .page input,select {
+      padding: 15px 5px;
+      border-radius: 10px;
+      border: 2px solid #fff8dc;
+      width: 100%;
+      max-width: 350px;
+    }
+    
+    .page input,select::placeholder {
+      color: #6b7a90;
+    }
+    
+    .page input,select:focus {
+      outline: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <h3 class="deposit">Deposit</h3>
+    <div class="number">
+      <label for="Amount">Amount</label>
+      <input type="number" class="dep-amount" placeholder="Amount" required>
+     </div>
+    <br />
+    <div class="number">
+      <label for="Acc-type">Account type</label>
+      <select name="account-type" id="account-type" value="account">
+        <option value="savings">SAVINGS</option>
+        <option value="current">CURRENT</option>
+       </select>
+     </div>
+      <br />
+      <div class="number">
+        <label for="pin">Enter PIN</label>
+        <input type="password" class="inp-pin" placeholder="PIN" inputmode="numeric" maxlength="4" pattern="[0-9]*"> 
+      </div>
+      <br>
+      <div class="number">
+        <label for="c-pin">Confirm PIN</label>
+        <input type="password" class="inp-pin retype" placeholder="Confirm PIN" inputmode="numeric" maxlength="4" pattern="[0-9]*">
+      </div>
+      <br>
+      <button type="submit">DEPOSIT</button>
+  </div>
+</body>
+
+</html>
