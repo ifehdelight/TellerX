@@ -13,8 +13,10 @@
     <div class="login-card">
       <h1 class="app-name">TellerX ATM</h1>
       <h2 class="login-info">Login</h2>
-      <input type="text" class="input-acc" placeholder="Account Number">
-      <input type="password" class="input-pwd" placeholder="Password">
+      <input type="text" class="input-acc" placeholder="Account Number" required>
+      <input type="password" class="input-pwd" placeholder="Password" required>
+      <input type="checkbox" class="show-password" style="transform: translate(-109px, 15px); padding-top: 15px;">
+      <label for="show" style="transform: translate(27px, -10px);">Show Password</label>
       <button class="login-btn"type="submit">Login</button>
       <div class="login-status">
         <span class="spinner"></span>
@@ -43,19 +45,18 @@
         window.location.href = 'dashboard.html'
       }, 3500)
     })
-  </script>
-</body>
-
-</html>      }
-      
-      loginBtn.disabled = true
-      loginStatus.style.display = 'flex'
-      
-      setTimeout(() => {
-        window.location.href = 'dashboard.html'
-      }, 3500)
+    
+    const pwdBtn = document.querySelector('.input-pwd');
+    const pinBtn = document.querySelector('.show-password');
+    
+    pinBtn.addEventListener('click', () => {
+      if (pinBtn.checked) {
+        pwdBtn.type = 'text';
+      } else {
+        pwdBtn.type = 'password'
+      }
     })
   </script>
 </body>
 
-        </html>
+</html>
