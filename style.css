@@ -4,6 +4,9 @@
     --text: #5de0ff;       
     --green: #00c851;      
     --red: #ff4444;     
+    --yellow: #ffbb33;
+    --keypad: #123b6b;
+    --border: #1e4d8b
   }
 
     * {
@@ -59,14 +62,14 @@
       padding: 10px;
       border: 2px solid transparent;
       border-radius: 8px;
-      color: #1a2b4c;
+      color: #000;
       font-size: 15px;
       transition: border 0.2s;
     }
     
     input:focus {
       outline: none;
-      border: 2px solid #fff8dc;
+      border: 2px solid var(--border);
     }
     
     input::placeholder {
@@ -79,17 +82,21 @@
       
     }
     
+    .input-pwd:focus {
+      letter-spacing: 0.5rem;
+    }
+    
     .login-btn {
       padding: 12px 20px;
       border-radius: 8px;
       border: none;
       font-size: 17px;
-      background-color: cornsilk;
-      color: cornflowerblue;
+      background-color: var(--green);
+      color: #000;
       font-weight: 600;
       cursor: pointer;
       width: 100%;
-      margin-top: 10px;
+      margin-top: 0px;
       transition: all 0.2s;
     }
     
@@ -110,7 +117,7 @@
       gap: 8px;
       justify-content: center;
       align-items: center;
-      color: #fff8dc;
+      color: var(--text);
       margin-top: 10px;
       font-weight: 600;
     }
@@ -119,7 +126,7 @@
       width: 16px;
       height: 16px;
       border: 2px solid rgba(255, 248, 220, 0.3);
-      border-top: 2px solid #fff8dc;
+      border-top: 2px solid var(--bg);
       border-radius: 50%;
       animation: spin 0.8s linear infinite;
     }
@@ -134,27 +141,30 @@
     }
     
     .dcontainer {
-      background: ghostwhite;
+      background: var(--bg);
       padding: 20px 20px 150px 20px;
       margin: 0 auto;
       width: 100%;
       max-width: 400px;
       border-bottom-right-radius: 15px;
       border-bottom-left-radius: 15px;
+      
     }
     
     .user-welcome {
       padding-left: 5px;
       font-size: 11px;
       font-weight: 499;
+      color: var(--text);
+      margin-bottom: 5px;
     }
     
     .actions-widgets {
-      background: cornflowerblue;
+      background: var(--screen);
       color: #ffffff;
       padding: 30px 50px;
       border-radius: 10px;
-      border: 2px solid #fff8dc;
+      border: 0.3px solid var(--border);
       display: flex;
       flex-direction: column;
       gap: 5px;
@@ -178,31 +188,34 @@
       flex-direction: row;
       justify-content: space-between;
       gap: 60px;
+      width: 300px;
+      padding: 0 20px 0 20px;
     }
     
     .balance {
       font-size: 15px;
       margin-top: 10px;
       margin-left: -30px;
+      background: transparent;
     }
     
     .dep-button {
-      background: ghostwhite;
-      border: 2px solid #fff8dc;
+      background: var(--green);
+      border: 1px solid var(--border);
       border-radius: 10px;
       padding: 5px 10px;
       font-size: 13px;
       font-weight: 500;
-      color: gray;
+      color: #000;
       margin-top: 10px;
-      
+      margin-left: 60px;
     }
     
     .other-actions {
       display: flex;
       flex-direction: row;
       gap: 20px;
-      background: white;
+      background: var(--screen);
       padding: 30px 45px;
       justify-content: flex-start;
       box-shadow: 0 2px 7px rgba(0, 0, 0, 0.4);
@@ -213,8 +226,7 @@
       padding: 10px 12px;
       border: none;
       border-radius: 12px;
-      background: cornflowerblue;
-      color: #ffffff;
+      color: var(--text);
       
     }
     
