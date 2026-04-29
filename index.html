@@ -13,7 +13,7 @@
     <div class="login-card">
       <h1 class="app-name">TellerX ATM</h1>
       <h2 class="login-info">Login</h2>
-      <input type="text" class="input-acc" placeholder="Account Number" required>
+      <input type="text" class="input-acc" placeholder="Account name" required>
       <input type="password" class="input-pwd" placeholder="Password" required>
       <input type="checkbox" class="show-password" style="transform: translate(-109px, 15px); padding-top: 15px;">
       <label for="show" style="transform: translate(27px, -10px);">Show Password</label>
@@ -25,38 +25,7 @@
       </div>
     </div>
   </div>
-  <script>
-    const loginStatus = document.querySelector('.login-status')
-    const loginBtn = document.querySelector('.login-btn')
-    
-    loginBtn.addEventListener('click', (e) => {
-      const acc = document.querySelector('.input-acc').value.trim();
-      const pwd = document.querySelector('.input-pwd').value.trim();
-      
-      if (!acc || !pwd) {
-        alert('Enter account number and password')
-        return;
-      }
-      
-      loginBtn.disabled = true
-      loginStatus.style.display = 'flex'
-      
-      setTimeout(() => {
-        window.location.href = 'dashboard.html'
-      }, 3500)
-    })
-    
-    const pwdBtn = document.querySelector('.input-pwd');
-    const pinBtn = document.querySelector('.show-password');
-    
-    pinBtn.addEventListener('click', () => {
-      if (pinBtn.checked) {
-        pwdBtn.type = 'text';
-      } else {
-        pwdBtn.type = 'password'
-      }
-    })
-  </script>
+  <script src="script.js"></script>
 </body>
 
 </html>
