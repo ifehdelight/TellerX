@@ -1,21 +1,27 @@
 const loginStatus = document.querySelector('.login-status')
 const loginBtn = document.querySelector('.login-btn')
-    
+
 loginBtn.addEventListener('click', (e) => {
-  const acc = document.querySelector('.input-acc').value.trim();
-  const pwd = document.querySelector('.input-pwd').value.trim();
-      
-  if (!acc || !pwd) {
+  e.preventDefault()
+  
+  const acc = document.querySelector('.input-acc')
+  const trimmedAcc = acc.value.trim()
+  const pwd = document.querySelector('.input-pwd');
+  const trimmedPwd = pwd.value.trim()
+  
+  const storedAcc = localStorage.setItem('userName', acc.value)
+  
+  if (!trimmedAcc || !trimmedPwd) {
     alert('Enter account number and password')
         return;
   }
       
       loginBtn.disabled = true
       loginStatus.style.display = 'flex'
-      
+      console.log(acc.value)
       setTimeout(() => {
         window.location.href = 'dashboard.html'
-      }, 3500)
+      }, 2500)
     })
     
     const pwdBtn = document.querySelector('.input-pwd');
@@ -28,22 +34,4 @@ loginBtn.addEventListener('click', (e) => {
         pwdBtn.type = 'password'
       }
     })
-    
-    const userName = document.querySelector('.user-welcome');
-    const balance = document.querySelector('.balance');
-    const depositBtn = document.querySelector('.dep-button');
-    const transferBtn = document.querySelector('.transfer-btn');
-    const withdrawBtn = document.querySelector('.withdraw-btn');
-    const historyBtn = document.querySelector('.history-btn')
-    
-    
-    depositBtn.addEventListener('click', (e) => {
-      setTimeout(() => {
-        window.location.href = 'depPage.html'
-      }, 700)
-    })
-    
-    const AmountDeposited = document.querySelector('.dep-amount')
-    const firstInputedPin = document.querySelector('.inp-pin')
-    const secondInputerPin = document.querySelector('.retype')
-    console.log(firstInputedPin.value === secondInputerPin.value)
+   
