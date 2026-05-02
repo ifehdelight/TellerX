@@ -11,30 +11,33 @@
 <body>
   <div class="page">
     <h3 class="deposit">Deposit</h3>
-    <div class="number">
-      <label for="Amount">Amount</label>
-      <input type="number" class="dep-amount" placeholder="Amount" required value="4090">
-     </div>
-    <br />
-    <div class="number">
-      <label for="Acc-type">Account type</label>
-      <select name="account-type" id="account-type" value="account">
-        <option value="savings">SAVINGS</option>
-        <option value="current">CURRENT</option>
-       </select>
-     </div>
+    <form class="deposit-form" action="" method="get" accept-charset="utf-8">
+     
+      <div class="number">
+        <label for="Amount">Amount</label>
+        <input type="number" class="dep-amount" placeholder="Amount" required>
+      </div>
       <br />
       <div class="number">
-        <label for="pin">Enter PIN</label>
-        <input type="password" class="inp-pin" placeholder="PIN" inputmode="numeric" maxlength="4" pattern="[0-9]*" value="1234"> 
+        <label for="Acc-type">Account type</label>
+        <select name="account-type" id="account-type" value="account">
+          <option value="savings">SAVINGS</option>
+          <option value="current">CURRENT</option>
+        </select>
       </div>
-      <br>
-      <div class="number">
-        <label for="c-pin">Confirm PIN</label>
-        <input type="password" class="inp-pin retype" placeholder="Confirm PIN" inputmode="numeric" maxlength="4" pattern="[0-9]*" value="1234">
-      </div>
-      <br>
-      <button type="submit" class="final-depBtn">DEPOSIT</button>
+        <br />
+        <div class="number">
+          <label for="pin">Enter PIN</label>
+          <input type="password" class="inp-pin" placeholder="PIN" inputmode="numeric" maxlength="4" pattern="[0-9]*" required> 
+        </div>
+        <br>
+        <div class="number">
+          <label for="c-pin">Confirm PIN</label>
+          <input type="password" class="inp-pin retype" placeholder="Confirm PIN" inputmode="numeric" maxlength="4" pattern="[0-9]*" required>
+        </div>
+        <br>
+        <input type="submit" name="" id="" value="DEPOSIT">
+        </form>
   </div>
   
   <script src="depPage.js"></script>
