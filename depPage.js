@@ -36,16 +36,6 @@ depositForm?.addEventListener('submit', (e) => {
   setTimeout(() => {
     window.location.href = 'dashboard.html'
   }, 800)
-  /* if (trimmedPin === trimmedPin2) {
-    alert('Deposited successfully')
-    setTimeout(() => {
-    window.location.href = 'dashboard.html'
-  }, 1000)
-  } else {
-    alert("PIN doesn't match")
-  }
-  
-  localStorage.setItem('amount', amountDeposited.value)
-  */
+
   
 })
