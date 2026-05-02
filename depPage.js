@@ -3,7 +3,6 @@ const amountDeposited = document.querySelector('.dep-amount')
 const firstInputedPin = document.querySelector('.inp-pin')
 const secondInputerPin = document.querySelector('.retype');
 const depBtn = document.querySelector('.final-depBtn')
-console.log(firstInputedPin.value === secondInputerPin.value)
 
 depositForm?.addEventListener('submit', (e) => {
   e.preventDefault();
