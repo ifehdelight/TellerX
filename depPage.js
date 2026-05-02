@@ -31,7 +31,7 @@ depositForm?.addEventListener('submit', (e) => {
   const newBalance = balance + trimmedAmt
   localStorage.setItem('amount', newBalance)
   
-  alert(`Deposited ${trimmedAmt.toLocaleString()} successfully`)
+  alert(`Deposited $${trimmedAmt.toLocaleString()} successfully`)
   setTimeout(() => {
     window.location.href = 'dashboard.html'
   }, 800)
