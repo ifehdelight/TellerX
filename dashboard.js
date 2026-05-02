@@ -14,19 +14,11 @@ function getBalance() {
   return isNaN(bal) ? 0 : bal;
 }
 
-console.log(getBalance().toLocaleString())
-console.log(isNaN(300))
 function updateBalance() {
   balance.textContent = `${getBalance().toLocaleString()}`
 }
+updateBalance()
 
-console.log(updateBalance())
-/*const newbalance = localStorage.getItem('amount')
-const convertedBalance = Number(balance.textContent)
-nBalance = convertedBalance + Number(newbalance)
-localStorage.setItem('test', nBalance)
-*/
-balance.innerHTML = localStorage.getItem('test')
 depositBtn.addEventListener('click', (e) => {
       setTimeout(() => {
         window.location.href = 'depPage.html'
