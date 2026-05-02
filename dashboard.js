@@ -7,7 +7,7 @@ const historyBtn = document.querySelector('.history-btn')
 
 const welcomeMsg = localStorage.getItem('userName') || 'Guest'  
 
-userName.textContent = `Welcome, $${welcomeMsg}`    
+userName.textContent = `Welcome, ${welcomeMsg}`    
 
 function getBalance() {
   const bal = Number(localStorage.getItem('amount'))
@@ -15,7 +15,7 @@ function getBalance() {
 }
 
 function updateBalance() {
-  balance.textContent = `${getBalance().toLocaleString()}`
+  balance.textContent = `$${getBalance().toLocaleString()}`
 }
 updateBalance()
 
