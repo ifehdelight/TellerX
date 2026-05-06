@@ -25,3 +25,8 @@ depositBtn.addEventListener('click', (e) => {
       }, 700)
     })
 
+withdrawBtn.addEventListener('click', (e) => {
+  setTimeout(() => {
+    window.location.href = 'withdraw.html'
+  })
+}, 800)
