@@ -3,6 +3,7 @@ const amountDeposited = document.querySelector('.dep-amount')
 const firstInputedPin = document.querySelector('.inp-pin')
 const secondInputerPin = document.querySelector('.retype');
 const depBtn = document.querySelector('.final-depBtn')
+console.log(firstInputedPin.value === secondInputerPin.value)
 
 withdrawForm?.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -28,13 +29,19 @@ withdrawForm?.addEventListener('submit', (e) => {
   
   const balance = Number(localStorage.getItem('amount') || 0)
   
-  const newBalance = balance + trimmedAmt
+  if (balance < trimmedAmt) {
+    return alert('Insufficient Amount')
+  }
+  
+  const newBalance = balance - trimmedAmt
   localStorage.setItem('amount', newBalance)
   
-  alert(`Deposited $${trimmedAmt.toLocaleString()} successfully`)
+  alert(`$${trimmedAmt.toLocaleString()} withdrew successfully`)
   setTimeout(() => {
     window.location.href = 'dashboard.html'
   }, 800)
+
+})  }, 800)
 
   
 })
